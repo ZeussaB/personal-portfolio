@@ -98,6 +98,49 @@ h2 {
   color: #555;
 }
 
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0077b6;
+  font-size: 1.8rem;
+}
+
+.contact-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-card li {
+  margin: 12px 0;
+  font-size: 1.1rem;
+}
+
+.contact-card strong {
+  color: #0077b6;
+  display: inline-block;
+  width: 90px;
+}
+
+.contact-card a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-card a:hover {
+  color: #0077b6;
+  text-decoration: underline;
+}
+
 footer {
   position: fixed;
   bottom: 0;
