@@ -39,10 +39,38 @@ h2 {
   color: #0077b6;
 }
 
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.home-text {
+  max-width: 500px;
+}
+
+.home-text h2 {
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
 .profile-photo {
   border-radius: 50%;
-  width: 150px;
-  margin-bottom: 20px;
+  width: 300px;   
+  height: 300px;  
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .skills, .projects {
@@ -98,25 +126,34 @@ h2 {
   color: #555;
 }
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+}
+
 .contact-card {
   background: white;
-  padding: 30px;
+  padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
   text-align: left;
 }
 
 .contact-card h2 {
-  margin-bottom: 20px;
   text-align: center;
-  color: #0077b6;
-  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
 .contact-card ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .contact-card li {
@@ -124,21 +161,114 @@ h2 {
   font-size: 1.1rem;
 }
 
-.contact-card strong {
-  color: #0077b6;
-  display: inline-block;
-  width: 90px;
+.contact-card a {
+  color: #18bc9c;
+  text-decoration: none;
 }
 
-.contact-card a {
-  color: #333;
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.about-section {
+  background: white;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 900px;
+}
+
+.about-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #0077b6;
+}
+
+.about-section p,
+.about-section li {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section li {
+  margin-bottom: 10px;
+}
+
+.about-section.links {
+  text-align: center;
+}
+
+.about-section.links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #0077b6;
+  color: white;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
 
-.contact-card a:hover {
+.about-section.links a:hover {
+  background: #005f86;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.skills .card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.skills h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
   color: #0077b6;
-  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  padding-left: 10px;
+  position: relative;
+  color: #444;
+}
+
+.skills li::before {
+  content: "✔";
+  color: #0077b6;
+  position: absolute;
+  left: -20px;
 }
 
 footer {
